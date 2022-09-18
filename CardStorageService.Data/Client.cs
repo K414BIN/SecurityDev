@@ -13,5 +13,21 @@ namespace CardStorageService.Data
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ClientId { get; set; }
+
+        [Column]
+        [StringLength(255)]
+        public string? Surname { get; set; }
+        
+        [Column]
+        [StringLength(255)]
+        public string? Firstname { get; set; }
+
+        [Column]
+        [StringLength(255)]
+        public string? Patronymic { get; set; }
+
+        [InverseProperty(nameof(Card.Client))]
+        public virtual ICollection<Card> Cards { get; set; } = new HashSet<Card>();
+
     }
 }

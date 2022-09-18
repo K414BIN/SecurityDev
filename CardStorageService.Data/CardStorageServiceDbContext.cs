@@ -12,5 +12,7 @@ namespace CardStorageService.Data
         public CardStorageServiceDbContext(DbContextOptions options) : base(options)
         {
         }
+        public virtual DbSet<Card> Cards { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
     }
 }
