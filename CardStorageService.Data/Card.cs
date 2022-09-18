@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CardStorageService.Data
 {
-    internal class Card
+    public class Card
     {
     }
 }
