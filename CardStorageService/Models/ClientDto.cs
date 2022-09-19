@@ -2,6 +2,12 @@
 {
     public class ClientDto
     {
-        //TODO: Доработать самостоятельно
+        public string? Surname { get; set; }
+
+        public string? Firstname { get; set; }
+
+        public string? Patronymic { get; set; }
+
+       
     }
 }

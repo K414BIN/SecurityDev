@@ -33,6 +33,6 @@ namespace CardStorageService.Data
         [Column]
         public DateTime ExpDate { get; set; }
 
-        public virtual Client Client { get; set; }  
+        public virtual Client? Client { get; set; }  
     }
 }

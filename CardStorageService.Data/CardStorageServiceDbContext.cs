@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CardStorageService.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,10 @@ namespace CardStorageService.Data
 {
     public class CardStorageServiceDbContext : DbContext
     {
-        public CardStorageServiceDbContext(DbContextOptions options) : base(options)
-        {
-        }
         public virtual DbSet<Card> Cards { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
+          
+        public CardStorageServiceDbContext(DbContextOptions<CardStorageServiceDbContext> options) : base (options)
+        { }
     }
 }

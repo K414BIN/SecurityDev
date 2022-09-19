@@ -40,7 +40,7 @@ namespace CardStorageService.Controllers
             {
                 var clientId = _clientRepositoryService.Create(new Client
                 {
-                    FirstName = request.FirstName,
+                    Firstname = request.FirstName,
                     Surname = request.Surname,
                     Patronymic = request.Patronymic
                 });
