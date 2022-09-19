@@ -1,19 +1,26 @@
-﻿using CardStorageService.Data;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+
 
 namespace CardStorageService.Data
 {
     public class CardStorageServiceDbContext : DbContext
     {
-        public virtual DbSet<Card> Cards { get; set; }
-        public virtual DbSet<Client> Clients { get; set; }
-          
-        public CardStorageServiceDbContext(DbContextOptions<CardStorageServiceDbContext> options) : base (options)
-        { }
+
+        public virtual DbSet<Client> Clients { get; set; } = null!;
+        public virtual DbSet<Card> Cards { get; set; } = null!;
+     
+        public CardStorageServiceDbContext(DbContextOptions options) : base(options) 
+        {
+           
+        }
+      
+        protected override void OnModelCreating (ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Card>().ToTable("Card");
+            
+            modelBuilder.Entity<Client>().ToTable("Client");            
+        }
     }
 }
+
+

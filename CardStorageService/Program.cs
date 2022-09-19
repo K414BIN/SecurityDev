@@ -1,7 +1,8 @@
-using Microsoft.AspNetCore.Hosting;
+using CardStorageService.Data;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.EntityFrameworkCore;
 using NLog.Web;
+using System.Configuration;
 
 namespace CardStorageService
 {
@@ -30,12 +31,12 @@ namespace CardStorageService
 
             }).UseNLog(new NLogAspNetCoreOptions() { RemoveLoggerFactoryFilter = true });
             #endregion
-
+        
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+          
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -46,7 +47,6 @@ namespace CardStorageService
             }
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
