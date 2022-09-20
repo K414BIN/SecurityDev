@@ -14,12 +14,7 @@ namespace CardStorageService.Data
            
         }
       
-        protected override void OnModelCreating (ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Card>().ToTable("Card");
-            
-            modelBuilder.Entity<Client>().ToTable("Client");            
-        }
+       
     }
 }
 

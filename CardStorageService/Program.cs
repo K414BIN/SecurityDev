@@ -11,6 +11,10 @@ namespace CardStorageService
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            #region Configure EF DBContext Service (CardstorageService Database)
+            
+            builder.Services.AddDbContext<CardStorageServiceDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            #endregion
 
             #region Logging service
 
