@@ -8,7 +8,8 @@ namespace CardStorageService.Data
 
         public virtual DbSet<Client> Clients { get; set; } = null!;
         public virtual DbSet<Card> Cards { get; set; } = null!;
-     
+        public DbSet<Account> Accounts { get; set; } = null!;   
+        public DbSet<AccountSession> AccountSessions { get; set; } = null!; 
         public CardStorageServiceDbContext(DbContextOptions options) : base(options) 
         {
            
