@@ -62,9 +62,6 @@ namespace CardStorageService.Controllers
                 return Ok(sessionInfo);
             }
             return Unauthorized();
-
         }
-
-
     }
 }

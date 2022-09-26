@@ -5,7 +5,6 @@ namespace CardStorageService.Data
 {
     public class CardStorageServiceDbContext : DbContext
     {
-
         public virtual DbSet<Client> Clients { get; set; } = null!;
         public virtual DbSet<Card> Cards { get; set; } = null!;
         public DbSet<Account> Accounts { get; set; } = null!;   
@@ -13,9 +12,7 @@ namespace CardStorageService.Data
         public CardStorageServiceDbContext(DbContextOptions options) : base(options) 
         {
            
-        }
-      
-       
+        }             
     }
 }
 

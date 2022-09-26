@@ -17,7 +17,6 @@ namespace CardStorageService.Data
         [ForeignKey(nameof(Client))]
         public int ClientId { get; set; }
 
-
         [Column]
         [StringLength(20)]
         public string CardNo { get; set; }

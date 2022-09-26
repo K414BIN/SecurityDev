@@ -89,6 +89,5 @@ namespace CardStorageService.Services.Impl
         }
 
         #endregion
-
     }
 }

@@ -8,6 +8,5 @@
 
         public AccountDto Account { get; set; }
 
-
     }
 }

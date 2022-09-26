@@ -91,8 +91,6 @@ namespace CardStorageService.Controllers
                 });
             }
         }
-
         #endregion
-
     }
 }
