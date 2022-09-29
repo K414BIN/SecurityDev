@@ -1,0 +1,8 @@
+C:\Users\akradioman3\source\repos\CardStorageService\Seminar.Framework\bin\Debug\Seminar.Framework.exe.config
+C:\Users\akradioman3\source\repos\CardStorageService\Seminar.Framework\bin\Debug\Seminar.Framework.exe
+C:\Users\akradioman3\source\repos\CardStorageService\Seminar.Framework\bin\Debug\Seminar.Framework.pdb
+C:\Users\akradioman3\source\repos\CardStorageService\Seminar.Framework\obj\Debug\Seminar.Framework.csproj.AssemblyReference.cache
+C:\Users\akradioman3\source\repos\CardStorageService\Seminar.Framework\obj\Debug\Seminar.Framework.csproj.SuggestedBindingRedirects.cache
+C:\Users\akradioman3\source\repos\CardStorageService\Seminar.Framework\obj\Debug\Seminar.Framework.csproj.CoreCompileInputs.cache
+C:\Users\akradioman3\source\repos\CardStorageService\Seminar.Framework\obj\Debug\Seminar.Framework.exe
+C:\Users\akradioman3\source\repos\CardStorageService\Seminar.Framework\obj\Debug\Seminar.Framework.pdb
