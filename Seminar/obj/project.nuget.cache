@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "C0ElPPHGWpwZ35cy+NlG92UcXUcBBJAkHzQ5YTysEHjS1ib85VAFAJfv2z4UdCyF6Qp/BJE1u2TCMQexsIGLAA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\akradioman3\\source\\repos\\CardStorageService\\Seminar\\Seminar.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\akradioman3\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
