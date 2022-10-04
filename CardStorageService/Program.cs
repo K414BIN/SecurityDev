@@ -9,6 +9,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using CardStorageService.Models.Requests;
+using FluentValidation;
+using CardStorageService.Models.Validators;
+using AutoMapper;
+using CardStorageService.Mappings;
 
 namespace CardStorageService
 {
@@ -17,6 +22,20 @@ namespace CardStorageService
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            #region Configure FluentValidator
+
+            builder.Services.AddScoped<IValidator<AuthenticationRequest>, AuthenticationRequestValidator>();
+
+            #endregion
+
+            #region Configure Mapper
+
+            var mapperConfiguration = new MapperConfiguration(mp => mp.AddProfile(new MappingsProfile()));
+            var mapper = mapperConfiguration.CreateMapper();
+            builder.Services.AddSingleton(mapper);
+
+            #endregion
 
             #region Configure Options Services
 
@@ -52,7 +71,7 @@ namespace CardStorageService
 
             builder.Services.AddDbContext<CardStorageServiceDbContext>(options =>
             {
-               
+
                 options.UseSqlServer(builder.Configuration["Settings:DatabaseOptions:ConnectionString"]);
             });
 
@@ -100,7 +119,7 @@ namespace CardStorageService
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen( c =>
+            builder.Services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Мой сервис", Version = "v1" });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
