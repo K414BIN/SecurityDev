@@ -1,6 +1,4 @@
 .vs/
 .git/
-CardStorageService.Data/bin/
-CardStorageService.Data/obj/
-CardStorageService/obj/
-CardStorageService/bin/
+FullSearchSamples/bin/
+FullSearchSamples/obj/
