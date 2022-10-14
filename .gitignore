@@ -1,6 +1,12 @@
 .vs/
 .git/
+JwtSample/obj/
+JwtSample/bin/
 CardStorageService.Data/bin/
 CardStorageService.Data/obj/
 CardStorageService/obj/
 CardStorageService/bin/
+PasswordUtilsClient/bin/
+PasswordUtilsClient/obj/
+obj/
+bin/
